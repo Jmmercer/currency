@@ -57,9 +57,9 @@ const self = module.exports = {
             let date = 'latest';
         }
 
-        const url = 'http://api.fixer.io/' + date + '?base=' + base + '&symbols=' + symbols;
+        const urlDate = 'http://api.fixer.io/' + date + '?base=' + base + '&symbols=' + symbols;
 
-        rest.get(url).on('complete', function(err, response) {
+        rest.get(urlDate).on('complete', (err, response) => {
 
             if (response.statusCode == 200) {
 
